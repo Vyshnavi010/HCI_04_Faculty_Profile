@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      background-color: darkblue;
+      padding: 50px;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 15px;
+    }
+
+    .navbar a i {
+      margin-right: 8px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: darkblue;
+      border-radius: 8px;
+      padding: 5px 10px;
+    }
+
+    /* Main Container */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 120px auto; /* Added margin to accommodate fixed navbar */
+      padding: 40px;
+      max-width: 900px;
+    }
+
+    .profile-pic {
+      margin-left: 30px; /* Moved the image a little to the right */
+      flex-shrink: 0;
+    }
+
+    .profile-pic img {
+      max-width: 250px; /* Increased size of the image */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+      flex: 1;
+      max-width: 600px;
+      margin-right: 30px; /* Moved the content to the left */
+    }
+
+    .heading {
+      font-size: 2.5rem; /* Increased the font size */
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .subheading {
+      color: blue;
+      font-size: 1.8rem; /* Increased the font size */
+      margin-bottom: 15px;
+    }
+
+    .details {
+      font-size: 1.2rem; /* Increased the font size */
+      line-height: 1.8;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Links Section */
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      font-size: 1.1rem;
+    }
+
+    /* Hidden Content for Read More Button */
+.hidden-content {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.3rem; /* Increased font size */
+}
+
+.hidden-content p {
+  line-height: 1.8;
+  font-size: 1.3rem; /* Increased font size for the paragraphs */
+}
+
+    .read-more {
+      color: blue;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .read-more:hover {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar">
+      <a href="#Home">Home</a>
+      <a href="about_us.html">About Us</a>
+      <a id="search" href="faculty.html"><i class="fa fa-search"></i> Faculty Search</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Profile Info -->
+    <div class="content">
+      <div class="heading">Ms. Deepthi - HCI</div>
+      <div class="subheading">Assistant Professor, Department of Computer Science & AI</div>
+      <div class="details">
+        <p><strong>Mobile Number:</strong> 9876543210</p>
+        <p><strong>Email:</strong> <a href="mailto:deepthi@swarthmore.edu">deepthi.kumar@swarthmore.edu</a></p>
+        <p><strong>Location:</strong> Room.no-202</p>
+        <p><strong>Office Hours:</strong> Tuesday & Thursday, 10:00 AM - 12:00 PM</p>
+        <p><strong>Education:</strong> M.S. in HCI, University of California, Berkeley</p>
+        <p><strong>Affiliations:</strong> <a href="#">Computer Science & AI</a></p>
+        <p><strong>Schedule:</strong><a href="table2.html"> Timetable...</a></p>
+      </div>
+
+      <div class="heading">Research Interests</div>
+      <div class="hidden-content">
+        <p>Ms. Deepthi's research focuses on Human-Computer Interaction (HCI), with particular emphasis on user-centered design and usability testing. She works on creating intuitive interfaces and systems that improve user interaction and satisfaction.</p>
+        <p>Her recent projects involve developing mobile applications for improving user experience in education and healthcare sectors. She is also passionate about researching accessibility technologies for individuals with special needs.</p>
+        <p>Ms. Deepthi actively collaborates with industry professionals and academia to promote research in interactive technologies and their real-world applications. She believes in the power of collaboration to drive innovation in the field of HCI.</p>
+      </div>
+      <span class="read-more" onclick="toggleContent()">Read More...</span>
+    </div>
+    <!-- Profile Image -->
+    <div class="profile-pic">
+      <img src="https://media.istockphoto.com/photos/outdoor-waist-up-portrait-of-a-beautiful-woman-with-crossed-arms-picture-id1292137519?k=20&m=1292137519&s=612x612&w=0&h=kFtAzwm_xsJ3dH32Xl1Y8MHd6VguAl3kUFvNl-8aUQw=" alt="Deepthi Kumar">
+    </div>
+  </div>
+
+  <!-- Script to Toggle Read More Content -->
+  <script>
+    function toggleContent() {
+      const content = document.querySelector('.hidden-content');
+      const readMoreButton = document.querySelector('.read-more');
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        readMoreButton.textContent = "Read Less";
+      } else {
+        content.style.display = "none";
+        readMoreButton.textContent = "Read More...";
+      }
+    }
+  </script>
+</body>
+</html>
